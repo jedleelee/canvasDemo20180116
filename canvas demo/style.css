@@ -1,23 +1,94 @@
 #paintboard{
-    background: gray;
+    background: white;
     
     display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+ul,ol{
+    list-style: none;
+    
+}
+*{
+    margin: 0;
+    padding: 0; 
 }
 body{
-    margin: 0;
-    padding: 0;
+    overflow: hidden;
 }
 .actions{
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
 }
-.actions > #brush{
-    display: none;
+.actions svg{
+    width: 1.5em;
+    height: 1.5em;
+    /*padding: 20px;*/
+    margin-left: 5px; 
+    margin-top: 5px;
 }
-.actions.x > #brush{
-    display: inline-block;
+
+.actions svg.active{
+    fill:red;
+    transform: scale(1.2);
+    /*margin: 0 10px;*/
+    transition: all 0.3s;
 }
-.actions.x > #eraser{
-    display: none;
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.colors{
+     position: fixed;
+     top: 40px;
+     left: 10px;
+     
+}
+.colors > li{
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     
+     margin: 10px 0;
+}
+.colors > li.black{
+    background-color: black;
+}
+.colors > li.red{
+    background-color: red;
+}
+.colors > li.blue{
+    background-color: blue;
+}
+.colors > li.green{
+    background-color: green;
+}
+.colors > li.active{
+    box-shadow: 0 0 6px rgba(0,0,0,0.9);
+    transform: scale(1.2);
+}
+/*粗细线*/
+.size{
+    position: fixed;
+    right: 20px;
+    top: 10px;
+
+}
+.size > li{
+    margin: 20px 0;
+}
+.size > .thin{
+    height: 0;
+    width: 20px;
+    border-top: 3px solid black;
+}
+.size > .thick{
+    height: 0;
+    width: 20px;
+    border-top: 6px solid black;
 }

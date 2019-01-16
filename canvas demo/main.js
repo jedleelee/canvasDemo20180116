@@ -43,3 +43,26 @@ eraser.onclick = function(){
         eraser.textContent = '橡皮擦'
     }
 }
+//touch事件
+canvas.ontouchstart = function(){
+    cansole.log('开始摸了')
+
+}
+canvas.ontouchmove = function(){
+    cansole.log('边摸变动')
+    
+}
+canvas.ontouchend = function(){
+    cansole.log('摸完了')
+    
+}
+//brush/earser点击切换
+eraser.onclick = function(){
+    eraserEnabled = true
+    actions.className = 'actions x'
+}
+
+brush.onclick = function(){
+    eraserEnabled = false
+    actions.className = 'actions'
+}
